@@ -57,6 +57,13 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 12px
+
+    }
+
+    .form div 
+    {
+        display: flex;
+        flex-direction: column;
     }
 
     
@@ -97,34 +104,45 @@
 
     @media (max-width: 640px)
     {
-        
+        .container
+        {
+            height: 100%;
+        }
+        .form
+        {
+            height: 100%;
+            justify-content: space-between;
+        }
 
         
     }
         
-    }
+    
 </style>
 <body>
    <div class="login">
        <div class="container">
-           <form action="/" class="form">
+             <h1 class="title">My account</h1>
+             <form action="/" class="form">
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <input type="text" class="input name-input" id="name" placeholder="Alfonzo Suarez">
 
-                <h1 class="title">My account</h1>
+                    <label for="new-email" class="label">Email</label>
+                    <input type="text" class="input email-input" id="new-email-input" placeholder="youremail@example.com">
 
-               <label for="name" class="label">Name</label>
-               <input type="text" class="input name-input" id="name" placeholder="Alfonzo Suarez">
+                    <label for="new-password" class="label">Password</label>
+                     <input type="password" class="input password-input" id="new-password-input" placeholder="*********">
 
-               <label for="new-email" class="label">Email</label>
-               <input type="text" class="input email-input" id="new-email-input" placeholder="youremail@example.com">
+                </div>
+                
 
-               <label for="new-password" class="label">Password</label>
-               <input type="password" class="input password-input" id="new-password-input" placeholder="*********">
+               
 
-
-            <input type="submit" value="Create" class="primary-button login-button">
+             <input type="submit" value="Create" class="primary-button login-button">
 
             
-           </form>
+            </form>
 
         
 
