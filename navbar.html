@@ -21,6 +21,8 @@
     nav
     {
         display: flex;
+        justify-content: space-between;
+
     }
     body
     {
@@ -35,25 +37,38 @@
 
     .logo 
     {
-        width: 100px;
+        width: 100%;
+        margin-left: 8px;
 
     }
 
-    a
+    .navbar-left ul li a, .navbar-right ul li a
     {
         text-decoration: none;
         color: var(--very-light-pink);
         border: 1px solid var(--white);
-        
+        padding: 8px;
+        border-radius: 8px;
+
     }
 
+    .navbar-left .navbar-left-list
+    {
+        margin-left: 16px;
+    }
+
+    .navbar-left ul li a:hover , .navbar-right ul li a:hover
+    {
+        border: 1px solid var(--hospital-green);
+    }
     .navbar-left ul, .navbar-right ul
     {
         list-style: none;
         padding: 0;
-        margin-top: 24px;
+        margin: 0;
         display: flex;
         align-items: center;
+        height: 60px;
     }
     .navbar-left
     {
@@ -61,7 +76,51 @@
 
     }
 
-    
+    .navbar-email
+    {
+        color: var(--very-light-pink);
+        font-size: var(--small);
+        margin-right: 16px;
+
+    }
+
+    .navbar-shopping-cart
+    {
+        position: relative;
+        margin-right: 16px;
+    }
+
+    .navbar-shopping-cart div
+    {
+        border-radius: 12px;
+        background-color: var(--hospital-green);
+        width: 12px;
+        height: 12px;
+        font-size: 9px;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+ @media (max-width: 640px)
+ {
+     .menu
+     {
+         display: block;
+         margin-left: 16px;
+     }
+
+     .navbar-left ul
+     {
+        display: none;
+     }
+
+     .navbar-email
+     {
+         display: none;
+     }
+ }
 
 </style>
 <body>
@@ -76,18 +135,18 @@
                <li><a href="#">Clothes</a></li>
                <li><a href="#">Toys</a></li>
                <li><a href="#">Furniture</a></li>
-               <li><a href="#">How we are</a></li>
+               <li><a href="#">Us</a></li>
                <li><a href="#">Others</a></li>
            </ul>
         </div>
 
         <div class="navbar-right">
            <ul class="navbar-right-list">
-                <li>platzi@example.com</li>
+                <li class="navbar-email">platzi@example.com</li>
 
-                <li class="navbar-shopping-cart"><img src="./icons/icon_shopping_cart.svg" alt=""></li>
+                <li class="navbar-shopping-cart"><img src="./icons/icon_shopping_cart.svg" alt=""><div>2</div></li>
            </ul>
-            <div>2</div>
+            
         </div>
     </nav>
 </body>
