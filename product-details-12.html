@@ -17,6 +17,7 @@
         --very-light-pink: #C7C7C7;
         --text-input-field: #F7F7F7;
         --hospital-green: #ACD9B2;
+        --strong-hospital-green: #94da9e;
         --white: #FFFFFF;
         --black: #000000;
         --small: 14x;
@@ -31,8 +32,12 @@
         padding: 0;
     }
 
+    
+
     .product-detail
     {
+        position: absolute;
+        right: 0;
         width: 360px;
         height: 640px;
     }
@@ -45,10 +50,21 @@
         background-color: var(--white);
         border-radius: 20px;
         place-items: center;
+        position: absolute;
+        margin: 12px 12px 0 12px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .product-detail-close:hover
+    {
+        width: 36px;
+        height: 36px;
     }
 
     .product-image
     {
+        
         border-radius: 20px;
         object-fit: cover;
         width: 360px;
@@ -63,7 +79,7 @@
 
     .product-info
     {
-        margin: 24px 24px 0 24px;
+        margin: 12px 24px 0 24px;
     }
 
     .product-info p:nth-child(1)
@@ -104,27 +120,70 @@
         align-items: center;
         justify-content: center;
         margin-top: 36px;
+        transition: 0.5s;
     }
+
+    .primary-button:hover
+    {
+        background-color: var(--strong-hospital-green);
+        width: 320px;
+        font-size: var(--large);
+        
+    }
+
+    .points
+    {
+        display: flex;
+        justify-content: center;
+        margin: 12px;
+    }
+
+    .points li
+    {
+        margin: 0px 8px;
+        list-style: none;
+        background-color: var(--very-light-pink);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .points li:nth-child(1)
+    {
+        background-color: var(--black);
+    }
+
+
 </style>
 <body>
-    <aside class="product-detail">
-        <div class="product-detail-close">
-            <img src="./icons/icon_close.png" alt="" class="detail-close">
-        </div>
 
-        <img src="./icons/--product-image-bicycle.jpeg" alt="product-image" class="product-image" width="360px" height="360px">
+    
+        <aside class="product-detail">
+            <div class="product-detail-close">
+                <img src="./icons/icon_close.png" alt="" class="detail-close">
+            </div>
+    
+            <img src="./icons/--product-image-bicycle.jpeg" alt="product-image" class="product-image" width="360px" height="360px">
+    
+            <ul class="points">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
 
-        <div class="product-info">
-           <p class="product-price">$35,00</p> 
-
-           <p class="product-name">Bike</p>
-
-           <p class="product-description">With its practical position, this bike also fulfills a decorative function, add your hall or workspace. Also gives vintage</p>
-
-           <div class="primary-button add-to-cart-button">
-               Add to cart
-           </div>
-        </div>
-    </aside>
+            <div class="product-info">
+               <p class="product-price">$35,00</p> 
+    
+               <p class="product-name">Bike</p>
+    
+               <p class="product-description">With its practical position, this bike also fulfills a decorative function, add your hall or workspace. Also gives vintage</p>
+    
+               <div class="primary-button add-to-cart-button">
+                   Add to cart
+               </div>
+            </div>
+        </aside>
+    
+    
 </body>
 </html>
