@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+</head>
+<style>
+      :root
+    {
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --strong-hospital-green: #94da9e;
+        --white: #FFFFFF;
+        --black: #000000;
+        --small: 14x;
+        --medium: 16px;
+        --large: 18px;
+    }
+    
+    body
+    {
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    .product-detail
+    {
+        position: absolute;
+        right: 0;
+        width: 360px;
+        height: 640px;
+    }
+
+   .title-container
+   {
+       display: flex;
+   }
+
+   
+
+    
+
+   
+
+    .primary-button
+    {
+        border: none;
+        width: 312px;
+        height: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: var(--hospital-green);
+        font-size: var(--medium);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 36px;
+        transition: 0.5s;
+    }
+
+    .primary-button:hover
+    {
+        background-color: var(--strong-hospital-green);
+        width: 320px;
+        font-size: var(--large);
+        
+    }
+
+    .shopping-cart figure img 
+    {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    
+    .shopping-cart p:nth-child(2)
+    {
+        color: var(--very-light-pink);
+        
+    }
+    .shopping-cart p:nth-child(3)
+    {
+        font-size: var(--medium);
+        font-weight: bold;
+    }
+
+    .shopping-cart
+    {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto auto;
+        gap: 16px;
+        margin-bottom: 24px;
+        align-items: center;
+        
+    }
+    .shopping-cart figure
+    {
+        margin: 0;
+    }
+    
+    .order 
+    {
+        background-color: var(--text-input-field);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: center;
+        border-radius: 5px;
+        margin-bottom: 24px;
+        padding: 0 24px;
+    }
+
+    .order p:nth-child(1)
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .order p span:nth-child(1)
+    {
+        font-size: var(--medium);
+        font-weight: bold;
+        padding: 0 0 4px 0;
+    }
+
+    .order p:nth-child(2)
+    {
+        text-align: end;
+        font-weight: bold;
+    }
+
+    .arrow
+    {
+        transform: rotate(180deg);
+        margin-right: 14px;
+    }
+
+    .uno 
+     {
+         margin: 24px 0 0;
+     }
+
+</style>
+<body>
+
+    
+        <aside class="product-detail">
+            <div class="title-container">
+                <img src="./icons/flechita.svg" alt="arrow" class="arrow">
+               
+                <h1 class="title">My Order</h1>
+                
+
+              
+            </div>
+            
+
+            <div class="my-order-content">
+
+                   <div class="shopping-cart">
+                       <figure>
+                           <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                       </figure>
+   
+                       <p>Bike</p>
+                       <p>30$</p>
+   
+                       <img src="./icons/icon_close.png" alt="close">
+
+                   </div>
+   
+                   <div class="shopping-cart">
+                       <figure>
+                           <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                       </figure>
+   
+                       <p>Bike</p>
+                       <p>30$</p>
+   
+                       <img src="./icons/icon_close.png" alt="close">
+
+                   </div>
+   
+                   <div class="shopping-cart">
+                       <figure>
+                           <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                       </figure>
+   
+                       <p>Bike</p>
+                       <p>30$</p>
+   
+                       <img src="./icons/icon_close.png" alt="close">
+
+                   </div>
+                   
+                </div>
+           
+            </div>
+
+            <div class="product-info">
+
+                <div class="order">
+
+                    <p>
+                        <span>03.25.21</span>
+                        
+                   </p>
+   
+                   <p>560$</p>
+               </div>
+
+               <div class="primary-button">
+                    Checkout
+               </div>
+            </div>
+        </aside>
+    
+        <div class="uno">1</div>
+    
+</body>
+</html>
