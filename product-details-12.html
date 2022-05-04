@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+</head>
+<style>
+      :root
+    {
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --white: #FFFFFF;
+        --black: #000000;
+        --small: 14x;
+        --medium: 16px;
+        --large: 18px;
+    }
+    
+    body
+    {
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-detail
+    {
+        width: 360px;
+        height: 640px;
+    }
+
+    .product-detail-close
+    {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        background-color: var(--white);
+        border-radius: 20px;
+        place-items: center;
+    }
+
+    .product-image
+    {
+        border-radius: 20px;
+        object-fit: cover;
+        width: 360px;
+        height: 360px;
+    }
+
+    .product-info p
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-info
+    {
+        margin: 24px 24px 0 24px;
+    }
+
+    .product-info p:nth-child(1)
+    {
+        font-size: var(--small);
+        font-weight: bold;
+
+    }
+
+    .product-info p:nth-child(2)
+    {
+        color: var(--very-light-pink);
+        font-size: var(--small);
+        margin-top: 4px;
+        
+    }
+
+    .product-detail p:nth-child(3)
+    {
+        font-size: var(--medium);
+        color: var(--very-light-pink);
+        margin-top: 37px;
+
+    }
+
+    .primary-button
+    {
+        border: none;
+        width: 312px;
+        height: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: var(--hospital-green);
+        font-size: var(--medium);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 36px;
+    }
+</style>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="" class="detail-close">
+        </div>
+
+        <img src="./icons/--product-image-bicycle.jpeg" alt="product-image" class="product-image" width="360px" height="360px">
+
+        <div class="product-info">
+           <p class="product-price">$35,00</p> 
+
+           <p class="product-name">Bike</p>
+
+           <p class="product-description">With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+
+           <div class="primary-button add-to-cart-button">
+               Add to cart
+           </div>
+        </div>
+    </aside>
+</body>
+</html>
